@@ -17,7 +17,7 @@ Navigate to the project, and build App
 4) Navigate to the application (battleship-game-engine)
 5) run the app (mvn spring-boot:run) or java -jar jarName.jar
 6) The app will start running at http://localhost:8081
-7) Swagger url http://localhost:8081/swagger-ui/
+7) Swagger url http://localhost:8081/swagger-ui.html
 11) H2 Database Url : http://localhost:7001/h2-ui/
 12) JDBC URL :jdbc:h2:mem:testdb
 13) user name:sa and password:sa

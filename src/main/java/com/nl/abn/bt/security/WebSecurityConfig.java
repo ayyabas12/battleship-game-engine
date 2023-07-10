@@ -9,6 +9,8 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.servlet.config.annotation.RedirectViewControllerRegistration;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 
 import java.util.List;
 
@@ -26,7 +28,9 @@ class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             "/swagger-ui.html",
             "/swagger-ui/**",
             "/log/**",
-            "/swagger-resources/**"
+            "/swagger-resources/**",
+            "/webjars/**",
+            "/springfox-swagger-ui/**"
     };
 
     @Override

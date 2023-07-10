@@ -13,15 +13,16 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration
 @EnableSwagger2
 public class SwaggerConfiguration {
+
     @Bean
-    public Docket component() {
+    public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .groupName("Login verify and country details")
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.nl.abn.bt"))
-                .paths(PathSelectors.ant("/api/frontend-service/**"))
-                .build().apiInfo(componentInfo());
+                .paths(PathSelectors.any())
+                .build();
     }
+
 
     private ApiInfo componentInfo() {
         return new ApiInfoBuilder().title("This controller get and save game details")
@@ -29,6 +30,8 @@ public class SwaggerConfiguration {
                 .version("0.0.1")
                 .build();
     }
+
+
 
 
 
